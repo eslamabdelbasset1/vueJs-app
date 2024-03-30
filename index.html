@@ -6,17 +6,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learn Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app-root">
         <h2>My Name : {{name}}</h2>
         <h2>My Age : {{age}}</h2>
         <a :href="link">test </a>
-
+        <br>
         <span>{{sayHi()}}</span>
+        <br>
+        <span>Number is {{ number }}</span>
+        <br>
+        <button v-on:click="testFun">button</button>
+        <br>
+
+        <h2>His name is {{name}}, His age is {{age}}</h2>
+        <p v-if="age < 30">His Age is younger than 30</p>
+        <p v-if="age > 30">His Age is older than 30</p>
+
+
+        <div v-for="(name, i) in students" :key="i">{{name}}</div>
     </div>
 
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./script.js"></script>
 </body>
 </html>
