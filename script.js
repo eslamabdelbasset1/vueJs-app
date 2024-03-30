@@ -1,24 +1,15 @@
 const { createApp } = Vue;
-
+const my_component ={
+    template: "<h3>hello World!</h3>",
+};
 createApp({
     data(){
         return{
-            name: "Eslam",
-            number: 0,
-            age: "25",
-            link: "https://google.com",
-
-            students: ["Eslam", "Ahmed", "Mohamed"],
         };
     },
-    methods:{
-        sayHi(){
-            return "Hello World!";
-        },
-        testFun(){
-            this.number++;
-        }
-    },
+    components:{
+        my_component,
+    }
 
 
 }).mount("#app-root");
